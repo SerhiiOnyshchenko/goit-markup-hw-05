@@ -557,11 +557,12 @@ header {
 	position: relative;
 	overflow: hidden;
 }
+
 .featyre-link-img > p {
 	position: absolute;
 	display: flex;
 	align-items: center;
-	bottom: -294;
+	bottom: -100%;
 	width: 100%;
 	height: 100%;
 	padding: 0 24px;
@@ -572,29 +573,16 @@ header {
 
 	color: #ffffff;
 	background: rgba(33, 150, 243, 0.9);
+
+	transition: bottom var(--time-anime) var(--time-function);
 }
 
 .feature-items > .item:hover .featyre-link-img > p,
 .feature-items > .item:focus .featyre-link-img > p {
 	bottom: 0;
-	animation-name: rise;
-	animation-duration: var(--time-anime);
-	animation-delay: var(--time-function);
+	transition: bottom var(--time-anime) var(--time-function);
 }
 
-@keyframes rise {
-	0% {
-		bottom: -294px;
-	}
-
-	100% {
-		bottom: 0;
-	}
-
-	0% {
-		bottom: -294px;
-	}
-}
 .feature-title {
 	color: var(--main-color);
 	font-weight: 700;
